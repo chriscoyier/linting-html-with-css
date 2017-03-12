@@ -1,0 +1,70 @@
+*[style] {
+  border: 5px solid red;
+}
+
+a:not([href]),
+a[href="#"],
+a[href=""],
+a[href*="javascript:void(0)"],
+a:empty,
+button:empty {
+  border: 5px solid red;
+}
+
+img:not([alt]),
+img[alt=""] {
+  border: 5px solid red;
+}
+
+html:not([lang]),
+html[lang=""] {
+  border: 5px solid red;
+}
+
+head,
+head *:not(title) {
+  display: block;
+}
+
+meta[charset]:not([charset="UTF-8"])::before {
+  content: " • Bad charset: " attr(charset) " ";
+  display: block;
+  color: red;
+}
+meta[charset]:not(:first-child)::after {
+  content: " • Bad charset: not first child";
+  color: red;
+}
+
+meta[name="viewport"][content*="user-scalable=no"]::after,
+meta[name="viewport"][content*="maximum-scale"]::after,
+meta[name="viewport"][content*="minimum-scale"]::after {
+  content: " • Bad viewport: " attr(content);
+  color: red;
+}
+script[type="text/javascript"]::before {
+  content: " • Unnecessary type attribute on script: " attr(type);
+  color: red;
+}
+link[rel="stylesheet"][type="text/css"]::before {
+  content: " • Unnecessary type attribute on link: " attr(type);
+  color: red;
+}
+
+
+input:not([id]),
+select:not([id]),
+textarea:not([id]),
+input:not([name]),
+select:not([name]),
+textarea:not([name]) {
+  border: 5px solid red;
+}
+
+label:not([for]) {
+  border: 5px solid red;
+}
+
+form:not([name]):not([id]) {
+  border: 5px solid red;
+}
