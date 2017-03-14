@@ -14,4 +14,5 @@ javascript:(function() {
 
 ### Ideas:
 
-- Browser extension to inject the CSS
+- ✅ Bookmarklet to inject CSS (done by Paul Esch-Laurent!)
+- ✅ Browser extension to inject the CSS (Done by Ire herself! https://github.com/ireade/alix)
